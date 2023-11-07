@@ -1,0 +1,493 @@
+/* Десктоп (большие экраны) */
+/* Грид сетка */
+.grid-wrapper{
+    display: grid;
+                         /* строка / колонна */
+    /* grid-template: repeat(3, 1fr) / repeat(10, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(240px , 1fr));
+    background-image: url("Background.jpg");
+}
+
+/* Верхняя сетка */
+.section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px , 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(60px , 1fr));
+    /*grid-template: 10% 90% / 20% 80%;*/
+    grid-column: 1/7;
+    grid-row: 1;
+    background-color: #282828;
+    border-radius: 10px;
+    justify-items: start;
+    column-gap: 1%;
+    grid-auto-flow: column;
+}
+
+/* Коробка в верхней сетке */
+.box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px , 1fr));
+    grid-template-rows: repeat(minmax(60px , auto));
+    /*grid-template: 10% 90% / 20% 80%;*/
+    grid-column: 2/6;
+    grid-row: 1;
+    background-color: #282828;
+    border-radius: 10px;
+    column-gap: 1%;
+    justify-self: start;
+    min-height: 240px;
+}
+
+/* Почта */
+.Email{
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1;
+    color: #F5F5F5;
+    max-height: 60px;
+    min-height: 30px;
+    padding: 10px;
+    justify-self: end;
+    min-width: 100px;
+    /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+}
+
+/* Номер телефона */
+.Phone{
+    display: grid;
+    grid-column: 3;
+    grid-row: 1;
+    color: #F5F5F5;
+    max-height: 60px;
+    min-height: 30px;
+    padding: 10px;
+    min-width: 140px;
+    
+    /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+}
+
+/* Сслыка на гит */
+.Git{
+    display: grid;
+    grid-column: 4;
+    grid-row: 1;
+    color: #F5F5F5;
+    max-height: 60px;
+    min-height: 30px;
+    padding: 10px;
+    min-width: 160px;
+    /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+}
+
+/* образование */
+.education{
+    grid-column: 1/6;
+    grid-row: 2;
+    color: #F5F5F5;
+    line-height: 15px;
+    min-height: 200px;
+    min-width: 350px;
+    padding: 10px;
+    min-height: 240px;
+    /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+}
+
+  /* Фото пользователя */
+.hero-image {
+    display: grid;
+    justify-self: start;
+    border-radius: 10px;
+    grid-column: 1/2;
+    grid-row: 1;
+    /* Используйте "линейный градиент", чтобы добавить к изображению эффект более темного фона (photographer.jpg ). Это облегчит чтение текста */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+    /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+  
+    /* Установите определенную высоту */
+    height: 100%;
+    width: 100%;
+      
+    min-width: 100px;
+    min-height: 100px;
+  
+    /* Расположите изображение по центру, чтобы оно хорошо масштабировалось на всех экранах */
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+
+/* Текст */
+.text {
+    grid-column: 1/5;
+    grid-row: 2;
+    margin-left: 40px;
+    line-height: 1;
+    margin-top: 20px;
+    min-height: 300px;
+    margin-bottom: 20px;
+}
+
+/* Кнопки */
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+
+/* Не сильно важная информация */
+.info{
+    grid-column: 1/7;
+    grid-row: 3;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 90px;
+    align-self: start;
+    }
+  
+.active, .collapsible:hover {
+    background-color: #555;
+}
+
+/* Сетка навыков */
+.content {
+    display: grid;
+    grid-column: 5/7;
+    grid-row: 2/3;
+    padding: 0 10px;
+    column-gap: 10px;
+    max-height: 340px;
+    min-height: 300px;
+}
+
+  /* Убедитесь, что заполнение ведет себя так, как ожидалось */
+  * {box-sizing:border-box}
+  
+  /* Контейнер шкалы навыков */
+.container {
+    width: 80%; /* Полная ширина */
+    background-color: #ddd; /* Серый фон */
+    border: 2px solid #555;
+}
+
+/* Колонки навыков */
+.skills {   
+    text-align: right; /* Выровнять текст по правому краю */
+    padding-top: 10px; /* Добавьте верхнюю прокладку */
+    padding-bottom: 5px; /* Добавьте нижнюю прокладку */
+    color: #F5F5F5; /* Белый цвет текста */
+}
+  
+/* Заполнение нвыков */
+.html {width: 30%; background-color: #DAA520;} /* Желтый */
+.css {width: 40%; background-color: #2196F3;} /* Синий */
+.js {width: 5%; background-color: #f44336;} /* Красный */
+.python {width: 40%; background-color: #04AA6D;} /* Зеленый */
+body, html {height: 100%;}
+  
+  /* Поместите текст в середину изображения */
+.hero-name {
+    text-align: left;
+    position: absolute;
+    left: 5%;
+    line-height: 0.5;
+    color: #F5F5F5;
+    font-family:  Cambria;
+}
+
+/* Текст на фото (снизу) */
+.hero-text {
+    text-align: left;
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    line-height: 1;
+    color: #F5F5F5;
+    font-family:  Monospace;
+}
+
+/* Модальный (фоновый) */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставить на месте */
+    z-index: 1; /* Поставить сверху */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полный рост */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgb(0,0,0); /* Запасной цвет */
+    background-color: rgba(0,0,0,0.4); /* Черный непрозрачный */
+}
+
+/* Модальное содержимое/коробка (превью) */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+/* Кнопка закрытия модального окна */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Планшеты (средние экраны) */
+@media (max-width: 1070px) and (min-width: 680px){
+    /* Текст */
+    .text {
+        grid-column: 1/3;
+        grid-row: 2;
+        margin-left: 40px;
+        line-height: 1;
+        margin-top: 20px;
+        min-height: 300px;
+        margin-bottom: 20px;
+    }
+
+        /* Сетка навыков */
+    .content {
+        display: grid;
+        grid-column: 3/7;
+        grid-row: 2;
+        padding: 0 10px;
+        column-gap: 10px;
+        max-height: 340px;
+        min-height: 200px;
+    }
+        /* Коробка в верхней сетке */
+    .box{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px , 1fr));
+        grid-template-rows: repeat(minmax(60px , auto));
+        /*grid-template: 10% 90% / 20% 80%;*/
+        grid-column: 2/6;
+        grid-row: 1;
+        background-color: #282828;
+        border-radius: 10px;
+        column-gap: 1%;
+        justify-self: start;
+        min-height: 240px;
+    }
+
+    /* Почта */
+    .Email{
+        display: grid;
+        grid-column: 1/3;
+        grid-row: 1;
+        color: #F5F5F5;
+        max-height: 60px;
+        min-height: 30px;
+        padding: 10px;
+        justify-self: center;
+        min-width: 100px;
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+    }
+
+    /* Номер телефона */
+    .Phone{
+        display: grid;
+        grid-column: 1;
+        grid-row: 2;
+        color: #F5F5F5;
+        max-height: 60px;
+        min-height: 30px;
+        padding: 10px;
+        min-width: 140px;
+        justify-self: center;
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+    }
+
+    /* Сслыка на гит */
+    .Git{
+        display: grid;
+        grid-column: 2;
+        grid-row: 2;
+        color: #F5F5F5;
+        max-height: 60px;
+        min-height: 30px;
+        padding: 10px;
+        min-width: 160px;
+        justify-self: center;
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+    }
+
+    /* образование */
+    .education{
+        grid-column: 1/6;
+        grid-row: 4;
+        color: #F5F5F5;
+        line-height: 15px;
+        min-height: 200px;
+        min-width: 350px;
+        padding: 10px;
+        min-height: 240px;
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+    }
+
+      /* Фото пользователя */
+    .hero-image {
+        display: grid;
+        justify-self: start;
+        border-radius: 10px;
+        grid-column: 1/2;
+        grid-row: 1;
+        /* Используйте "линейный градиент", чтобы добавить к изображению эффект более темного фона (photographer.jpg ). Это облегчит чтение текста */
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+
+        /* Установите определенную высоту */
+        height: 100%;
+        width: 100%;
+
+        min-width: 100px;
+        min-height: 100px;
+        /* Расположите изображение по центру, чтобы оно хорошо масштабировалось на всех экранах */
+        background-color: black;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+}
+
+
+/* Для телефонов (маленькие экраны)*/
+@media (max-width: 680px){
+    .content {
+        display: grid;
+        grid-column: 1;
+        grid-row: 3;
+        padding: 0 10px;
+        column-gap: 10px;
+        max-height: 340px;
+        min-height: 300px;
+        margin-left: 10px;
+    }
+    .section{
+        display: grid;
+        /*grid-template: 10% 90% / 20% 80%;*/
+        background-color: #282828;
+        border-radius: 10px;
+        column-gap: 1%;
+    }
+    .box{
+        display: grid;
+        background-color: #282828;
+        border-radius: 10px;
+        column-gap: 1%;
+        grid-row: 6/8;
+        grid-column: 1;
+        margin-bottom: 35px;
+    }
+    .Email{
+        display: grid;
+        grid-row: 1;
+        color: #F5F5F5;
+        max-height: 60px;
+        min-height: 30px;
+        padding: 10px;
+        min-width: 100px;
+        justify-self: start;
+       /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+    }
+    .Phone{
+        display: grid;
+        grid-column: 1;
+        grid-row: 2;
+        color: #F5F5F5;
+        max-height: 60px;
+        min-height: 30px;
+        padding: 10px;
+        min-width: 140px;
+        justify-self: start;
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+        }
+    .Git{
+        display: grid;
+        grid-column: 1;
+        grid-row: 3;
+        color: #F5F5F5;
+        max-height: 60px;
+        min-height: 30px;
+        padding: 10px;
+        min-width: 140px;
+        justify-self: start;
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+    }
+    .education{
+        grid-column: 1/6;
+        grid-row: 4;
+        color: #F5F5F5;
+        line-height: 15px;
+        min-height: 200px;
+        min-width: 350px;
+        padding: 10px;
+        min-height: 240px;
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+    }
+    .hero-image {
+        display: grid;
+        justify-self: start;
+        border-radius: 10px;
+        grid-column: 1;
+        grid-row: 1/3;
+        /* Используйте "линейный градиент", чтобы добавить к изображению эффект более темного фона (photographer.jpg ). Это облегчит чтение текста */
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+        /*border: 2px solid rgb(80, 145, 27); /* Обводим зелёной линией */*/
+
+        /* Установите определенную высоту */
+        height: 100%;
+        width: 100%;
+
+        min-width: 200px;
+        min-height: 300px;
+
+        /* Расположите изображение по центру, чтобы оно хорошо масштабировалось на всех экранах */
+        background-color: black;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .text {
+        grid-column: 1/5;
+        grid-row: 2;
+        margin-left: 10px;
+        line-height: 1;
+        margin-top: 20px;
+        min-height: 300px;
+        margin-bottom: 20px;
+    }
+    .info{
+        grid-column: 1/7;
+        grid-row: 4;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: 90px;
+        align-self: start;
+    }  
+}
